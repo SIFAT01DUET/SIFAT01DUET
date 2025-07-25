@@ -10,6 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Academicons for ResearchGate -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.1/css/academicons.min.css">
     
     <style>
         /* General Styles & Reset */
@@ -716,19 +718,32 @@
 
         .social-links {
             margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px; /* Space between the new buttons */
         }
 
         .social-links a {
-            display: inline-block;
-            font-size: 2.5em;
-            color: var(--text-dark);
-            margin: 0 15px;
-            transition: color 0.3s ease, transform 0.3s ease;
+            display: inline-flex; /* Use flex to center icon */
+            justify-content: center;
+            align-items: center;
+            width: 60px; /* Fixed size for circular button */
+            height: 60px; /* Fixed size for circular button */
+            border-radius: 50%; /* Make it circular */
+            background-color: var(--dark-bg); /* Background for the button */
+            color: var(--text-dark); /* Icon color */
+            font-size: 1.8em; /* Adjust icon size within the button */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4); /* Default shadow for depth */
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-color); /* Small border */
         }
 
         .social-links a:hover {
-            color: var(--primary-color);
-            transform: translateY(-5px);
+            background-color: var(--primary-color); /* Change background on hover */
+            color: var(--text-light); /* Keep text light on hover */
+            transform: translateY(-7px); /* Lift effect */
+            box-shadow: 0 10px 25px rgba(0, 123, 255, 0.5); /* Stronger shadow on hover */
         }
 
         /* Footer */
@@ -794,6 +809,11 @@
             }
             .contact-info {
                 flex-direction: column;
+            }
+            .social-links a {
+                width: 50px;
+                height: 50px;
+                font-size: 1.5em;
             }
         }
 
@@ -1202,14 +1222,16 @@
         </div>
 
         <div class="social-links">
-            <!-- EDITABLE: Your LinkedIn Profile -->
-            <a href="https://www.linkedin.com/in/rashidul-sifat?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <!-- EDITABLE: Your GitHub Profile (if applicable) -->
-            <a href="[http://github.com/SIFAT01DUET]" target="_blank" aria-label="GitHub"><i class="fab fa-github-square"></i></a>
-            <!-- EDITABLE: Your ResearchGate Profile -->
-            <!-- <a href="[https://www.researchgate.net/profile/Rashidul-Sifat?ev=hdr_xprf]" target="_blank" aria-label="ResearchGate"><i class="ai ai-researchgate"></i></a> -->
-            <!-- EDITABLE: Your Facebook Profile -->
-            <!-- <a href="[https://www.facebook.com/sifat89duet]" target="_blank" aria-label="Facebook"><i class="ai ai-facebook"></i></a> -->        
+            <!-- Your LinkedIn Profile -->
+            <a href="https://www.linkedin.com/in/rashidul-sifat?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <!-- Your GitHub Profile -->
+            <a href="http://github.com/SIFAT01DUET" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <!-- Your ResearchGate Profile -->
+            <a href="https://www.researchgate.net/profile/Rashidul-Sifat?ev=hdr_xprf" target="_blank" aria-label="ResearchGate"><i class="ai ai-researchgate"></i></a>
+            <!-- Your Facebook Profile -->
+            <a href="https://www.facebook.com/sifat89duet" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <!-- Your Twitter X Profile -->
+            <a href="https://x.com/sifatduet89?t=VdTLR4_rvSRHbNUYbS2HOQ&s=09" target="_blank" aria-label="Twitter X"><i class="fab fa-x-twitter"></i></a>        
         </div>
     </section>
 
